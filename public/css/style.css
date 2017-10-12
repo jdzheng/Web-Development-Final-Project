@@ -1,0 +1,168 @@
+/**
+ * TODO(you): Add the CSS necessary to complete your final project.
+ **/
+ body {
+   margin: 0px;
+ }
+
+ #welcome, #menu, #search,  #picks, form {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+ #menu, #welcome {
+   background-image: url(https://s3-media1.fl.yelpcdn.com/assets/srv0/yelp_large_assets/884c12b285fc/assets/img/home/hero_photos/TdClV4QlpucjFX4GdPc2QQ.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: top;
+   height: 100vh;
+   width: 100vw;
+ }
+
+ #picks {
+   background-image: url(https://s3-media2.fl.yelpcdn.com/assets/srv0/yelp_large_assets/1629eec0e96d/assets/img/home/hero_photos/3oz4uflrjm1Uftg_R689PA.jpg);
+   background-size: cover;
+   background-position: top;
+   height: 100vh;
+   width: 100vw;
+ }
+
+ #search {
+   background-image: url(https://s3-media1.fl.yelpcdn.com/assets/srv0/yelp_large_assets/d9e1a1812e7c/assets/img/home/hero_photos/56iJtZPYDgoy0hSV4Ez5zw.jpg);
+   background-size: cover;
+   background-position: top;
+   height: 100vh;
+   width: 100vw;
+ }
+
+ h1, h2, .question {
+   color: white;
+   font-family: 'Roboto Slab', serif;
+   max-width: 780px;
+   text-align: center;
+ }
+
+h1 {
+  font-size: 64px;
+}
+
+h2 {
+  font-size: 48px;
+
+}
+
+.question {
+  font-family: 'courier', sans-serif;
+  font-size: 24px;
+  margin: 10px;
+}
+
+form {
+  width: 60vw;
+}
+
+input[value=Back], input[type=submit] {
+  color: white;
+  font-size: 16px;
+  font-family: 'courier', sans-serif;
+  background-color: rgba(211, 211, 211, .2);
+  border: solid 1px;
+  border-color: white;
+  width: 25%;
+  height: 45px;
+  margin-top: 25px;
+}
+
+#results, #error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  color: white;
+  font-family: 'courier', sans-serif;
+  font-size: 30px;
+  margin: 10px;
+  font-weight:bold;
+}
+
+#restaurant, #type, #url {
+  margin: 5px;
+}
+
+a {
+  text-decoration: none;
+  color: #42b4d6;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+input::-webkit-input-placeholder {
+  color:white;
+}
+
+#picks input[type=text], #search input[type=text] {
+  background-color: rgba(211, 211, 211, .2);
+  color: white;
+  border: 0px;
+  border-bottom: 0.5px solid #e2e2e2;
+  font-size: 14px;
+  font-weight: lighter;
+}
+
+input {
+  margin: 5px;
+  width: 75%;
+  height: 30px;
+}
+
+#success {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  font-family: 'courier', sans-serif;
+  font-size: 24px;
+  margin: 19px;
+}
+
+ #choices {
+   font-family: 'Montserrat', sans-serif;
+   font-size: 16px;
+ }
+
+.choice {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+ }
+
+.choice {
+   border: solid white;
+   border-width: 2px;
+   padding-top: 20px;
+   padding-bottom: 20px;
+   padding-left: 50px;
+   padding-right: 50px;
+   margin: 20px;
+   color: white;
+   background: rgba(211, 211, 211, .2);
+ }
+
+input[value=Back]:hover, .choice:hover, input[type=submit]:hover {
+   background-color: #e0e0e0;
+ }
+
+input[value=Back], .choice, input[type=submit] {
+   transition: 0.5s;
+ }
+
+ .inactive {
+    display: none !important;
+ }

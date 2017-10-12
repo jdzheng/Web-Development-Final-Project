@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>cuisine</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css"/>
+
+    <script src="welcome-screen.js" defer></script>
+    <script src="menu-screen.js" defer></script>
+    <script src="top-picks-screen.js" defer></script>
+    <script src="search-screen.js" defer></script>
+    <script src="app.js" defer></script>
+    <script src="script.js" defer></script>
+    <script>
+      function removeDiv() {
+        const notification = document.querySelector('#success');
+        const button = document.querySelector('input[value=Add]');
+        notification.classList.add('inactive');
+        button.classList.remove('inactive');
+      }
+    </script>
+    <script>
+      function hideResults() {
+        const error = document.querySelector('#error');
+        const notification = document.querySelector('#results');
+        const button = document.querySelector('input[value=Search]');
+        notification.classList.add('inactive');
+        button.classList.remove('inactive');
+        error.classList.add('inactive');
+
+        const name = document.querySelector('#restaurant');
+        const cuisine = document.querySelector('#type');
+        const link = document.querySelector('#url');
+        name.textContent = 'Restaurant Name: ';
+        cuisine.textContent = 'Cuisine: ';
+        link.textContent = 'Link: ';
+      }
+    </script>
+  </head>
+    <!-- TODO(you): Add the HTML necessary to complete your final project. -->
+  <body>
+    <div id="welcome">
+      <header>
+        <h1>Top Spots Near Me</h1>
+      </header>
+
+      <div id="choices">
+        <div id="top-choices" class="choice">NEW FAVORITE PLACE</div>
+        <div id="search-options" class="choice">SEARCH</div>
+      </div>
+    </div>
+
+    <div id="menu" class="inactive">
+      <header>
+        <h1>Top Spots Near Me</h1>
+      </header>
+
+      <div id="choices">
+        <div id="top-choices" class="choice">NEW FAVORITE PLACE</div>
+        <div id="search-options" class="choice">SEARCH</div>
+      </div>
+    </div>
+
+    <div id="picks" class="inactive">
+      <h2> Add a New Favorite Restaurant </h2>
+
+      <form id="myForm">
+        <div class="question">Name of Restaurant:</div>
+        <input type="text" id="name" placeholder="Enter a resturant name" oninput="removeDiv()"/>
+
+        <div class="question">Cuisine Type:</div>
+        <input type="text" id="cuisine" placeholder="What type of cuisine is it?" oninput="removeDiv()"/>
+
+        <div class="question">Link:</div>
+        <input type="text" id="link" placeholder="Link to restaurant" oninput="removeDiv()"/>
+
+        <input type="submit" value="Add"/>
+
+        <div class="inactive" id="success">
+          Added!
+        </div>
+        <input type="submit" value="Back"/>
+      </form>
+    </div>
+
+    <div id="search" class="inactive">
+      <form>
+        <h2>What are you craving?</h2>
+        <input type="text" id="key" placeholder="Enter a cuisine/restaurant name" oninput="hideResults()"/>
+        <div id="error" class="inactive">No results. Please try another.</div>
+        <input type="submit" value="Search" />
+        <div class="inactive" id="results">
+          <div id="restaurant">Restaurant Name: </div>
+          <div id="type">Cuisine Type: </div>
+          <div id="url">Link: </div>
+        </div>
+        <input type="submit" value="Back"/>
+      </form>
+    </div>
+  </body>
+</html>
